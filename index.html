@@ -306,6 +306,15 @@
             text-decoration: underline;
         }
 
+        .paper-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #888;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
         /* Contact Section */
         .contact-content {
             text-align: center;
@@ -410,7 +419,10 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="profile-image">
-                    <img src="images/IMG_2436.JPG" alt="Sujan Bharadwaj" onerror="this.style.display='none'; this.parentElement.innerHTML='👤';">
+
+                    <img src="images/IMG_2436.JPG" alt="Sujan Bharadwaj" 
+                         onload="console.log('Profile image loaded successfully')" 
+                         onerror="console.log('Profile image failed to load'); this.style.display='none'; this.parentElement.innerHTML='👤';">
                 </div>
                 <div class="about-text">
                     <p>Hello! I'm an AI & Data Science Engineer with ~3 years of experience specializing in transforming complex data into actionable business insights. My passion lies at the intersection of artificial intelligence, sustainability analytics, and ethical AI development.</p>
@@ -495,21 +507,24 @@
                     <h3 class="paper-title">ESG Knowledge Graphs for Sustainable Business Intelligence</h3>
                     <p class="paper-authors">Sujan Bharadwaj, UNSW Research Group</p>
                     <p class="paper-venue">AI for Sustainability Conference, 2024 (In Review)</p>
-                    <a href="papers/esg-knowledge-graphs.pdf" class="paper-download" download>📄 Download Paper</a>
+
+                    <span class="paper-status">📝 In Review</span>
                 </div>
 
                 <div class="paper-item">
                     <h3 class="paper-title">Large Concept Models for Interdisciplinary Scientific Discovery</h3>
                     <p class="paper-authors">Sujan Bharadwaj, Scinter Research Team</p>
                     <p class="paper-venue">International Conference on Knowledge Graphs, 2025 (Upcoming)</p>
-                    <a href="papers/lcm-scientific-discovery.pdf" class="paper-download" download>📄 Download Paper</a>
+
+                    <span class="paper-status">🔄 In Progress</span>
                 </div>
 
                 <div class="paper-item">
                     <h3 class="paper-title">Ethical AI in Healthcare: Multi-Label Disease Detection with Interpretability</h3>
                     <p class="paper-authors">Sujan Bharadwaj</p>
                     <p class="paper-venue">Journal of Medical AI Ethics, 2024 (Under Review)</p>
-                    <a href="papers/ethical-ai-healthcare.pdf" class="paper-download" download>📄 Download Paper</a>
+
+                    <span class="paper-status">📝 Under Review</span>
                 </div>
             </div>
         </div>
@@ -553,6 +568,20 @@
     </footer>
 
     <script>
+        // Error handling
+        window.addEventListener('error', function(e) {
+            console.error('Page error:', e.error);
+        });
+
+        window.addEventListener('unhandledrejection', function(e) {
+            console.error('Unhandled promise rejection:', e.reason);
+        });
+
+        // DOM loaded check
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded successfully');
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
