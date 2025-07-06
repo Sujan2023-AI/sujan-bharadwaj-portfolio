@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujan Bharadwaj - AI & Data Science Portfolio
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Papers Section */
+        .papers-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .paper-item {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .paper-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .paper-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .paper-authors {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-venue {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .paper-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .paper-download:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Sujan Bharadwaj</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#papers">Papers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Sujan Bharadwaj</h1>
+            <p>AI & Data Science Engineer • ESG Analytics Specialist • Transforming Data into Business Insights</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="assets/resume/resume.pdf" class="btn btn-secondary" download>📄 Download Resume</a>
+                <a href="https://github.com/Sujan2023-AI" class="btn btn-secondary" target="_blank">🐙 GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    👤
+                </div>
+                <div class="about-text">
+                    <p>Hello! I'm an AI & Data Science Engineer with ~3 years of experience specializing in transforming complex data into actionable business insights. My passion lies at the intersection of artificial intelligence, sustainability analytics, and ethical AI development.</p>
+                    
+                    <p>Currently pursuing my Master's in AI at UNSW Sydney, I've built my expertise around ESG knowledge graphs, scalable data pipelines, and deploying ML models that drive real-world impact. My work spans from designing Large Concept Models for scientific literature analysis to developing ontology-enhanced ESG analytics platforms that help organizations make data-driven sustainability decisions.</p>
+                    
+                    <p>What sets me apart is my focus on <strong>AI Ethics and Responsible Data Science</strong> - ensuring that the models I build not only perform well but also contribute positively to society. I'm particularly interested in how AI can solve sustainability challenges and create transparent, interpretable systems that stakeholders can trust.</p>
+                    
+                    <p>My technical toolkit includes Python, PyTorch, AWS, SPARQL, and modern data visualization tools. But beyond the technology, I'm driven by the mission to bridge the gap between academic innovation and practical business solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🌱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">ESG Knowledge Graph Engine</h3>
+                        <p class="project-description">Ontology-enhanced ESG analytics platform integrating RDF ontologies and SPARQL queries with PCA to produce interpretable sustainability insights. Built reusable engine enabling automated ESG profiling based on SASB standards.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/esg-analytics" target="_blank">GitHub</a>
+                            <a href="#contact">Request Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🧠</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Large Concept Models (LCM)</h3>
+                        <p class="project-description">Enhanced Large Concept Models to extract interdisciplinary insights from scientific literature. Built dynamic knowledge graphs mapping publications, entities, and emerging research trends for automated concept linking.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/lcm-scientific-insights" target="_blank">Code</a>
+                            <a href="#papers">Research Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🏥</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multi-Label Disease Detection</h3>
+                        <p class="project-description">Advanced healthcare ML system using SMOTE for imbalance handling and batch normalization. Achieved average ROC-AUC > 0.91 across multiple conditions, focusing on interpretable and ethical AI in healthcare.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/healthcare-ml" target="_blank">GitHub</a>
+                            <a href="#papers">Publication</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">☁️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cloud Cost Analytics Platform</h3>
+                        <p class="project-description">Automated end-to-end cloud cost analytics reducing manual reporting by 40%. Built interactive dashboards enabling data-driven budget decisions and achieved 25-30% monthly cost savings for enterprise clients.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/cloud-analytics" target="_blank">Source</a>
+                            <a href="#contact">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="papers">
+        <div class="container">
+            <h2 class="section-title">Research Papers</h2>
+            <div class="papers-list">
+                <div class="paper-item">
+                    <h3 class="paper-title">Multi-Account Embedded ATM Card: Enhancing Security in Financial Transactions</h3>
+                    <p class="paper-authors">Sujan Bharadwaj, Research Team</p>
+                    <p class="paper-venue">International Research Journal of Engineering and Technology (IRJET), 2020</p>
+                    <a href="papers/atm-card-security.pdf" class="paper-download" download>📄 Download Paper</a>
+                </div>
+
+                <div class="paper-item">
+                    <h3 class="paper-title">ESG Knowledge Graphs for Sustainable Business Intelligence</h3>
+                    <p class="paper-authors">Sujan Bharadwaj, UNSW Research Group</p>
+                    <p class="paper-venue">AI for Sustainability Conference, 2024 (In Review)</p>
+                    <a href="papers/esg-knowledge-graphs.pdf" class="paper-download" download>📄 Download Paper</a>
+                </div>
+
+                <div class="paper-item">
+                    <h3 class="paper-title">Large Concept Models for Interdisciplinary Scientific Discovery</h3>
+                    <p class="paper-authors">Sujan Bharadwaj, Scinter Research Team</p>
+                    <p class="paper-venue">International Conference on Knowledge Graphs, 2025 (Upcoming)</p>
+                    <a href="papers/lcm-scientific-discovery.pdf" class="paper-download" download>📄 Download Paper</a>
+                </div>
+
+                <div class="paper-item">
+                    <h3 class="paper-title">Ethical AI in Healthcare: Multi-Label Disease Detection with Interpretability</h3>
+                    <p class="paper-authors">Sujan Bharadwaj</p>
+                    <p class="paper-venue">Journal of Medical AI Ethics, 2024 (Under Review)</p>
+                    <a href="papers/ethical-ai-healthcare.pdf" class="paper-download" download>📄 Download Paper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm passionate about leveraging AI for sustainable business solutions and ethical technology development. Let's discuss how data science can drive meaningful impact in your organization!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>sujanbharadwaj23@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>0401611069</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🔗</span>
+                        <span>linkedin.com/in/sujan-bharadwaj</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🐙</span>
+                        <span>github.com/Sujan2023-AI</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Sydney, Australia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sujan Bharadwaj. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards and paper items
+        document.querySelectorAll('.project-card, .paper-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
