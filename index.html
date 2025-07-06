@@ -27,7 +27,8 @@
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
+
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
@@ -79,24 +80,33 @@
         }
 
         .hero-content {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+
+
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
             padding: 3rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: slideInUp 1s ease-out;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+
+            opacity: 0.95;
             animation: slideInUp 1s ease-out 0.2s both;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .cta-buttons {
@@ -134,9 +144,11 @@
         }
 
         .btn-secondary {
-            background: transparent;
+
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             border: 2px solid white;
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
@@ -159,6 +171,7 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #333;
+            font-weight: 700;
         }
 
         /* About Section */
@@ -193,21 +206,25 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
+            color: #444;
         }
 
         /* Experience Section */
         .experience-timeline {
-            max-width: 800px;
+
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .experience-item {
             background: white;
             border-radius: 15px;
-            padding: 2rem;
+
+            padding: 2.5rem;
             margin-bottom: 2rem;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            border-left: 4px solid #667eea;
         }
 
         .experience-item:hover {
@@ -223,7 +240,8 @@
         }
 
         .experience-title {
-            font-size: 1.3rem;
+
+            font-size: 1.4rem;
             font-weight: bold;
             color: #333;
             margin-bottom: 0.5rem;
@@ -232,16 +250,22 @@
         .experience-company {
             color: #667eea;
             font-weight: 600;
+            font-size: 1.1rem;
         }
 
         .experience-period {
             color: #888;
-            font-size: 0.9rem;
+
+            font-size: 0.95rem;
+            font-weight: 500;
         }
 
         .experience-description {
-            color: #666;
-            line-height: 1.6;
+
+
+            color: #555;
+            line-height: 1.7;
+            font-size: 1rem;
         }
 
         .experience-description ul {
@@ -250,7 +274,9 @@
         }
 
         .experience-description li {
-            margin-bottom: 0.5rem;
+
+            margin-bottom: 0.7rem;
+            color: #555;
         }
 
         /* Projects Section */
@@ -297,24 +323,14 @@
         .project-description {
             color: #666;
             margin-bottom: 1rem;
+            line-height: 1.6;
         }
-
-
-
-
-
-
 
         .project-tech {
             color: #667eea;
-
             font-size: 0.9rem;
             font-weight: 500;
         }
-
-
-
-
 
         /* Papers Section */
         .papers-list {
@@ -324,10 +340,12 @@
 
         .paper-item {
             background: white;
-            border-radius: 10px;
+
+            border-radius: 15px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -336,9 +354,11 @@
         }
 
         .paper-title {
-            font-size: 1.2rem;
+
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: #333;
+            font-weight: 600;
         }
 
         .paper-authors {
@@ -366,20 +386,26 @@
             text-decoration: underline;
         }
 
-        .paper-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #888;
-            font-style: italic;
-            font-size: 0.9rem;
-        }
+
+
+
+
+
+
+
+
 
         /* Contact Section */
         .contact-content {
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .contact-content p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
 
         .contact-info {
@@ -395,12 +421,14 @@
             align-items: center;
             gap: 0.5rem;
             color: #666;
+            font-size: 1rem;
         }
 
         .contact-item a {
             color: #667eea;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .contact-item a:hover {
@@ -461,6 +489,10 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .experience-item {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -484,11 +516,10 @@
             <h1>Sujan Bharadwaj</h1>
             <p>AI & Data Science Engineer • ESG Analytics Specialist • Transforming Data into Business Insights</p>
             <div class="cta-buttons">
-
                 <a href="#experience" class="btn btn-primary">View Experience</a>
                 <a href="assets/resume/Resume_Sujan.pdf" class="btn btn-secondary" download>📄 Download Resume</a>
 
-                <a href="https://www.linkedin.com/in/sujan-bharadwaj" class="btn btn-secondary" target="_blank">🔗 LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sujan-bharadwaj-9243021b2" class="btn btn-secondary" target="_blank">🔗 LinkedIn</a>
             </div>
         </div>
     </section>
@@ -498,7 +529,6 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="profile-image">
-
                     <img src="images/IMG_2436.JPG" alt="Sujan Bharadwaj" 
                          onload="console.log('Profile image loaded successfully')" 
                          onerror="console.log('Profile image failed to load'); this.style.display='none'; this.parentElement.innerHTML='👤';">
@@ -523,17 +553,24 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">AI Research Engineer</h3>
-                            <p class="experience-company">Scinter Australia</p>
+
+
+                            <h3 class="experience-title">AI Engineer Intern</h3>
+                            <p class="experience-company">Scinter, Sydney, Australia</p>
                         </div>
-                        <span class="experience-period">2023 - Present</span>
+
+                        <span class="experience-period">Apr 2025 – Present</span>
                     </div>
                     <div class="experience-description">
                         <ul>
-                            <li>Developed Large Concept Models (LCM) for extracting interdisciplinary insights from scientific literature</li>
-                            <li>Built dynamic knowledge graphs mapping publications, entities, and emerging research trends</li>
-                            <li>Implemented automated concept linking algorithms for scientific discovery</li>
-                            <li>Enhanced research collaboration platforms with AI-driven insights</li>
+
+
+
+
+                            <li>Designed and enhanced Large Concept Models (LCM) to extract interdisciplinary insights from scientific literature</li>
+                            <li>Built Dynamic Knowledge Graphs mapping publications, entities, and emerging research trends</li>
+                            <li>Structured unstructured data into ontologies for semantic search, concept reasoning, and visual analytics</li>
+                            <li>Supported deployment of scalable NLP pipelines for automated concept linking and trend forecasting</li>
                         </ul>
                     </div>
                 </div>
@@ -541,17 +578,31 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">ESG Data Analyst</h3>
-                            <p class="experience-company">Sustainable Analytics Co.</p>
+
+
+                            <h3 class="experience-title">AI & Data Science Engineer (Part-Time)</h3>
+                            <p class="experience-company">UNSW, Sydney, Australia</p>
                         </div>
-                        <span class="experience-period">2022 - 2023</span>
+
+                        <span class="experience-period">May 2023 – May 2025</span>
                     </div>
                     <div class="experience-description">
                         <ul>
-                            <li>Designed ontology-enhanced ESG analytics platform using RDF ontologies and SPARQL queries</li>
-                            <li>Developed reusable ESG profiling engine based on SASB standards</li>
-                            <li>Implemented PCA-based dimensionality reduction for interpretable sustainability insights</li>
-                            <li>Created automated reporting systems for ESG compliance monitoring</li>
+
+
+
+
+                            <li>Led end-to-end development of an ontology-enhanced ESG analytics platform, integrating domain-specific knowledge graphs, RDF ontologies, and SPARQL queries with principal component analysis (PCA) to produce interpretable sustainability insights across sectors</li>
+                            <li>Built a reusable ESG Knowledge Graph Engine using Python and RDFLib, enabling automated feature selection, disclosure-topic classification, and industry-specific ESG profiling based on SASB standards</li>
+                            <li>Designed and deployed deep learning pipelines for environmental and marine image segmentation:
+                                <ul>
+                                    <li>Developed a U-Net model with Group Normalization and dropout layers to process RUGD terrain data under challenging lighting, achieving an 18% boost in pixel-level accuracy</li>
+                                    <li>Applied CNN architectures to the SeaTurtleID2022 dataset, reaching 0.84 IoU and over 92% classification accuracy for marine species recognition</li>
+                                </ul>
+                            </li>
+                            <li>Created a multi-label classification system for disease detection in healthcare datasets using SMOTE for imbalance handling and batch normalization for improved convergence; achieved an average ROC-AUC > 0.91 across multiple conditions</li>
+                            <li>Conducted comparative benchmarking of traditional and DL models (SVM, HOG+SVM vs CNN) across domain-shifted datasets, with deep learning models outperforming by 20–25% in F1-score</li>
+                            <li>Documented all experiments in reproducible modules for potential open-source publication, emphasizing engineering standards, modularity, and cross-domain reusability</li>
                         </ul>
                     </div>
                 </div>
@@ -559,17 +610,43 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Data Science Engineer</h3>
-                            <p class="experience-company">CloudTech Solutions</p>
+
+
+                            <h3 class="experience-title">Cloud Analytics Analyst</h3>
+                            <p class="experience-company">Accenture, India</p>
                         </div>
-                        <span class="experience-period">2021 - 2022</span>
+
+                        <span class="experience-period">Jan 2021 – Feb 2023</span>
                     </div>
                     <div class="experience-description">
                         <ul>
-                            <li>Built end-to-end cloud cost analytics platform reducing manual reporting by 40%</li>
-                            <li>Developed interactive dashboards for data-driven budget decision making</li>
-                            <li>Achieved 25-30% monthly cost savings for enterprise clients through optimization algorithms</li>
-                            <li>Implemented automated alerts and anomaly detection for cost management</li>
+
+
+
+
+                            <li>Automated end-to-end cloud cost analytics workflows using Python, SQL, and REST APIs, reducing manual reporting time by ~40% and enabling real-time anomaly detection for infrastructure cost spikes across multi-cloud environments (AWS, Azure)</li>
+                            <li>Designed and deployed interactive KPI dashboards in Google Data Studio and QlikView, enabling 20+ stakeholders across engineering and operations to track resource consumption, forecast trends, and make data-driven budget decisions</li>
+                            <li>Led a resource optimization initiative that identified underutilized and idle cloud assets including EC2 instances, storage buckets, and Elastic IPs—resulting in monthly cost savings of 25–30% for enterprise clients</li>
+                            <li>Developed a suite of modular scripts and monitoring tools to track usage patterns across AWS EC2, Azure Blob Storage, and RDS instances, improving visibility into resource consumption and streamlining compliance reporting for ISO and internal audits</li>
+                            <li>Bridged communication gaps between technical and financial teams by aligning usage metrics with billing forecasts. Created standardized usage-to-cost mapping logic that improved billing accuracy by 15%</li>
+                            <li>Mentored three junior analysts, sharing best practices in cloud optimization and analytics scripting, and contributed reusable code modules to internal automation repositories—enhancing team productivity and onboarding efficiency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">IoT Intern – Health Monitoring System</h3>
+                            <p class="experience-company">Nettur Technical Training Foundation</p>
+                        </div>
+                        <span class="experience-period">July 2019 – Aug 2019</span>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Engineered a real-time health monitoring system integrating temperature, heart rate, and motion sensors with microcontrollers to continuously track patient vitals and trigger alerts for anomalies</li>
+                            <li>Programmed embedded systems using C to handle real-time signal acquisition and processing, achieving response latency under 250ms, crucial for timely health interventions</li>
+                            <li>Implemented signal filtering and validation algorithms to minimize false positives and ensure >95% system reliability in noisy test environments</li>
                         </ul>
                     </div>
                 </div>
@@ -579,18 +656,12 @@
 
     <section id="projects">
         <div class="container">
-
             <h2 class="section-title">Key Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">🌱</div>
                     <div class="project-content">
                         <h3 class="project-title">ESG Knowledge Graph Engine</h3>
-
-
-
-
-
                         <p class="project-description">Ontology-enhanced ESG analytics platform integrating RDF ontologies and SPARQL queries with PCA to produce interpretable sustainability insights. Built reusable engine enabling automated ESG profiling based on SASB standards for enterprise sustainability reporting.</p>
                         <p class="project-tech">Technologies: Python, RDF, SPARQL, scikit-learn, D3.js</p>
                     </div>
@@ -600,11 +671,6 @@
                     <div class="project-image">🧠</div>
                     <div class="project-content">
                         <h3 class="project-title">Large Concept Models (LCM)</h3>
-
-
-
-
-
                         <p class="project-description">Enhanced Large Concept Models to extract interdisciplinary insights from scientific literature. Built dynamic knowledge graphs mapping publications, entities, and emerging research trends for automated concept linking and scientific discovery acceleration.</p>
                         <p class="project-tech">Technologies: PyTorch, Neo4j, NLP, Knowledge Graphs, Scientific APIs</p>
                     </div>
@@ -614,11 +680,6 @@
                     <div class="project-image">🏥</div>
                     <div class="project-content">
                         <h3 class="project-title">Multi-Label Disease Detection</h3>
-
-
-
-
-
                         <p class="project-description">Advanced healthcare ML system using SMOTE for imbalance handling and batch normalization. Achieved average ROC-AUC > 0.91 across multiple conditions, focusing on interpretable and ethical AI in healthcare with explainable predictions.</p>
                         <p class="project-tech">Technologies: Python, scikit-learn, SMOTE, LIME, Medical Imaging</p>
                     </div>
@@ -628,11 +689,6 @@
                     <div class="project-image">☁️</div>
                     <div class="project-content">
                         <h3 class="project-title">Cloud Cost Analytics Platform</h3>
-
-
-
-
-
                         <p class="project-description">Automated end-to-end cloud cost analytics platform reducing manual reporting by 40%. Built interactive dashboards enabling data-driven budget decisions and achieved 25-30% monthly cost savings for enterprise clients through predictive cost optimization.</p>
                         <p class="project-tech">Technologies: AWS, Python, Tableau, Apache Airflow, PostgreSQL</p>
                     </div>
@@ -652,29 +708,26 @@
                     <a href="papers/IRJET-paper.pdf" class="paper-download" download>📄 Download Paper</a>
                 </div>
 
-                <div class="paper-item">
-                    <h3 class="paper-title">ESG Knowledge Graphs for Sustainable Business Intelligence</h3>
-                    <p class="paper-authors">Sujan Bharadwaj, UNSW Research Group</p>
-                    <p class="paper-venue">AI for Sustainability Conference, 2024 (In Review)</p>
 
-                    <span class="paper-status">📝 In Review</span>
-                </div>
 
-                <div class="paper-item">
-                    <h3 class="paper-title">Large Concept Models for Interdisciplinary Scientific Discovery</h3>
-                    <p class="paper-authors">Sujan Bharadwaj, Scinter Research Team</p>
-                    <p class="paper-venue">International Conference on Knowledge Graphs, 2025 (Upcoming)</p>
 
-                    <span class="paper-status">🔄 In Progress</span>
-                </div>
 
-                <div class="paper-item">
-                    <h3 class="paper-title">Ethical AI in Healthcare: Multi-Label Disease Detection with Interpretability</h3>
-                    <p class="paper-authors">Sujan Bharadwaj</p>
-                    <p class="paper-venue">Journal of Medical AI Ethics, 2024 (Under Review)</p>
 
-                    <span class="paper-status">📝 Under Review</span>
-                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     </section>
@@ -687,24 +740,18 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
-
                         <a href="mailto:sujanbharadwaj23@gmail.com">sujanbharadwaj23@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <span>📱</span>
-
                         <a href="tel:+61401611069">0401611069</a>
                     </div>
                     <div class="contact-item">
                         <span>🔗</span>
 
-                        <a href="https://www.linkedin.com/in/sujan-bharadwaj" target="_blank">LinkedIn Profile</a>
+                        <a href="https://www.linkedin.com/in/sujan-bharadwaj-9243021b2" target="_blank">LinkedIn Profile</a>
                     </div>
                     <div class="contact-item">
-
-
-
-
                         <span>📍</span>
                         <span>Sydney, Australia</span>
                     </div>
@@ -754,7 +801,8 @@
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
             }
         });
 
@@ -772,8 +820,6 @@
                 }
             });
         }, observerOptions);
-
-
 
         // Observe project cards, paper items, and experience items
         document.querySelectorAll('.project-card, .paper-item, .experience-item').forEach(el => {
