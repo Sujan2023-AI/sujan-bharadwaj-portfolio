@@ -14,7 +14,8 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+
+            color: #2c3e50;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
@@ -35,7 +36,8 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
         }
 
         nav {
@@ -59,8 +61,10 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+
+
+            color: #2c3e50;
+            font-weight: 600;
             transition: color 0.3s ease;
         }
 
@@ -75,38 +79,48 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+
+            color: #2c3e50;
             position: relative;
         }
 
         .hero-content {
 
 
-            background: rgba(255, 255, 255, 0.15);
+
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-            padding: 3rem;
+
+            padding: 4rem;
             border-radius: 20px;
 
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: slideInUp 1s ease-out;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+
+            color: #2c3e50;
+            font-weight: 700;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
 
-            opacity: 0.95;
+
             animation: slideInUp 1s ease-out 0.2s both;
-            color: white;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+
+            color: #34495e;
+            font-weight: 500;
         }
 
         .cta-buttons {
@@ -118,10 +132,12 @@
         }
 
         .btn {
-            padding: 12px 24px;
+
+            padding: 15px 30px;
             border: none;
             border-radius: 50px;
-            font-size: 1rem;
+
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -132,33 +148,43 @@
         }
 
         .btn-primary {
-            background: #667eea;
+
+            background: #e74c3c;
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
         }
 
         .btn-primary:hover {
-            background: #5a6fd8;
+
+            background: #c0392b;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
         }
 
         .btn-secondary {
 
-            background: rgba(255, 255, 255, 0.2);
+
+            background: #3498db;
             color: white;
-            border: 2px solid white;
-            backdrop-filter: blur(10px);
+
+
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: #667eea;
+
+
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
         }
 
         /* Sections */
         section {
-            padding: 4rem 0;
+
+            padding: 5rem 0;
             background: white;
         }
 
@@ -168,9 +194,11 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+
+            font-size: 2.8rem;
             margin-bottom: 3rem;
-            color: #333;
+
+            color: #2c3e50;
             font-weight: 700;
         }
 
@@ -178,7 +206,8 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 3rem;
+
+            gap: 4rem;
             align-items: center;
         }
 
@@ -187,7 +216,8 @@
             max-width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+
+            background: linear-gradient(135deg, #e74c3c, #3498db);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -195,6 +225,7 @@
             font-size: 4rem;
             margin: 0 auto;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .profile-image img {
@@ -204,9 +235,19 @@
         }
 
         .about-text {
-            font-size: 1.1rem;
+
+            font-size: 1.2rem;
             line-height: 1.8;
-            color: #444;
+
+            color: #2c3e50;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text strong {
+            color: #e74c3c;
         }
 
         /* Experience Section */
@@ -222,50 +263,66 @@
 
             padding: 2.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            border-left: 4px solid #667eea;
+
+            border-left: 5px solid #e74c3c;
         }
 
         .experience-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1rem;
+
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
 
         .experience-title {
 
-            font-size: 1.4rem;
+
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #333;
+
+            color: #2c3e50;
             margin-bottom: 0.5rem;
         }
 
         .experience-company {
-            color: #667eea;
+
+            color: #e74c3c;
             font-weight: 600;
-            font-size: 1.1rem;
+
+            font-size: 1.2rem;
         }
 
         .experience-period {
-            color: #888;
 
-            font-size: 0.95rem;
-            font-weight: 500;
+
+
+
+            color: #7f8c8d;
+            font-size: 1rem;
+            font-weight: 600;
+            background: #ecf0f1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
         }
 
         .experience-description {
 
 
-            color: #555;
+
+            color: #2c3e50;
             line-height: 1.7;
-            font-size: 1rem;
+
+            font-size: 1.1rem;
         }
 
         .experience-description ul {
@@ -275,14 +332,17 @@
 
         .experience-description li {
 
-            margin-bottom: 0.7rem;
-            color: #555;
+
+
+            margin-bottom: 0.8rem;
+            color: #34495e;
         }
 
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -291,45 +351,61 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .project-image {
             height: 200px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+
+            background: linear-gradient(135deg, #e74c3c, #3498db);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
+
+            font-size: 2.5rem;
         }
 
         .project-content {
-            padding: 1.5rem;
+
+            padding: 2rem;
         }
 
         .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #333;
+
+
+
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
         }
 
         .project-description {
-            color: #666;
-            margin-bottom: 1rem;
+
+
+            color: #34495e;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
+            font-size: 1rem;
         }
 
         .project-tech {
-            color: #667eea;
-            font-size: 0.9rem;
-            font-weight: 500;
+
+
+
+            color: #e74c3c;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         /* Papers Section */
@@ -342,47 +418,64 @@
             background: white;
 
             border-radius: 15px;
-            padding: 2rem;
+
+            padding: 2.5rem;
             margin-bottom: 1.5rem;
 
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            border-left: 5px solid #3498db;
         }
 
         .paper-item:hover {
-            transform: translateY(-2px);
+
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .paper-title {
 
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: #333;
+
+
+
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
             font-weight: 600;
         }
 
         .paper-authors {
-            color: #666;
+
+            color: #7f8c8d;
             font-style: italic;
             margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
 
         .paper-venue {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+
+
+
+            color: #95a5a6;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
         }
 
         .paper-download {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #667eea;
+
+            color: #3498db;
             text-decoration: none;
-            font-weight: 500;
+
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
         .paper-download:hover {
+            color: #2980b9;
             text-decoration: underline;
         }
 
@@ -403,15 +496,20 @@
         }
 
         .contact-content p {
-            color: #555;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+
+
+
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            line-height: 1.6;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+
+            gap: 3rem;
             margin-top: 2rem;
             flex-wrap: wrap;
         }
@@ -419,26 +517,34 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: #666;
-            font-size: 1rem;
-        }
 
-        .contact-item a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s ease;
+
+
+            gap: 0.8rem;
+            color: #2c3e50;
+            font-size: 1.1rem;
             font-weight: 500;
         }
 
+        .contact-item a {
+
+            color: #e74c3c;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            font-weight: 600;
+        }
+
         .contact-item a:hover {
-            color: #5a6fd8;
+
+            color: #c0392b;
             text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            background: #333;
+
+            background: #2c3e50;
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -470,6 +576,10 @@
                 font-size: 1.1rem;
             }
 
+            .hero-content {
+                padding: 2rem;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -483,6 +593,7 @@
             .contact-info {
                 flex-direction: column;
                 align-items: center;
+                gap: 1.5rem;
             }
 
             .experience-header {
@@ -514,7 +625,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sujan Bharadwaj</h1>
-            <p>AI & Data Science Engineer • ESG Analytics Specialist • Transforming Data into Business Insights</p>
+
+            <p>AI & Data Science Engineer • ESG Analytics Specialist • Transforming AI into Business Solutions</p>
             <div class="cta-buttons">
                 <a href="#experience" class="btn btn-primary">View Experience</a>
                 <a href="assets/resume/Resume_Sujan.pdf" class="btn btn-secondary" download>📄 Download Resume</a>
@@ -534,13 +646,17 @@
                          onerror="console.log('Profile image failed to load'); this.style.display='none'; this.parentElement.innerHTML='👤';">
                 </div>
                 <div class="about-text">
-                    <p>Hello! I'm an AI & Data Science Engineer with ~3 years of experience specializing in transforming complex data into actionable business insights. My passion lies at the intersection of artificial intelligence, sustainability analytics, and ethical AI development.</p>
+
+                    <p>Hello! I'm an AI & Data Science Engineer with ~3 years of experience specializing in transforming complex data into actionable business insights. My passion lies at the intersection of artificial intelligence, sustainability analytics, and <strong>converting AI capabilities into practical business solutions</strong>.</p>
                     
-                    <p>Currently pursuing my Master's in AI at UNSW Sydney, I've built my expertise around ESG knowledge graphs, scalable data pipelines, and deploying ML models that drive real-world impact. My work spans from designing Large Concept Models for scientific literature analysis to developing ontology-enhanced ESG analytics platforms that help organizations make data-driven sustainability decisions.</p>
+
+                    <p>Having completed my Master's in AI at UNSW Sydney, I've built my expertise around ESG knowledge graphs, scalable data pipelines, and deploying ML models that drive real-world impact. My work spans from designing Large Concept Models for scientific literature analysis to developing ontology-enhanced ESG analytics platforms that help organizations make data-driven sustainability decisions.</p>
                     
-                    <p>What sets me apart is my focus on <strong>AI Ethics and Responsible Data Science</strong> - ensuring that the models I build not only perform well but also contribute positively to society. I'm particularly interested in how AI can solve sustainability challenges and create transparent, interpretable systems that stakeholders can trust.</p>
+
+                    <p>What sets me apart is my focus on <strong>bridging the gap between cutting-edge AI research and tangible business value</strong> - ensuring that the models I build not only perform well technically but also solve real business challenges and generate measurable ROI. I excel at translating complex AI concepts into business language that stakeholders can understand and act upon.</p>
                     
-                    <p>My technical toolkit includes Python, PyTorch, AWS, SPARQL, and modern data visualization tools. But beyond the technology, I'm driven by the mission to bridge the gap between academic innovation and practical business solutions.</p>
+
+                    <p>My technical toolkit includes Python, PyTorch, AWS, SPARQL, and modern data visualization tools. But beyond the technology, I'm driven by the mission to make AI accessible and valuable for businesses of all sizes, from startups to enterprise organizations.</p>
                 </div>
             </div>
         </div>
@@ -736,7 +852,8 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
-                <p>I'm passionate about leveraging AI for sustainable business solutions and ethical technology development. Let's discuss how data science can drive meaningful impact in your organization!</p>
+
+                <p>I'm passionate about leveraging AI for sustainable business solutions and converting cutting-edge technology into practical business value. Let's discuss how AI can drive meaningful impact and ROI in your organization!</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
