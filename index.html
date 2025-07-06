@@ -14,7 +14,6 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-
             color: #2c3e50;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
@@ -28,7 +27,6 @@
 
         /* Header */
         header {
-
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             position: fixed;
@@ -36,7 +34,6 @@
             left: 0;
             right: 0;
             z-index: 1000;
-
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
         }
 
@@ -61,8 +58,6 @@
 
         .nav-links a {
             text-decoration: none;
-
-
             color: #2c3e50;
             font-weight: 600;
             transition: color 0.3s ease;
@@ -79,23 +74,15 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-
             color: #2c3e50;
             position: relative;
         }
 
         .hero-content {
-
-
-
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
-
             padding: 4rem;
             border-radius: 20px;
-
-
-
             border: 2px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             max-width: 800px;
@@ -105,8 +92,6 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: slideInUp 1s ease-out;
-
-
             color: #2c3e50;
             font-weight: 700;
         }
@@ -114,11 +99,7 @@
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-
-
             animation: slideInUp 1s ease-out 0.2s both;
-
-
             color: #34495e;
             font-weight: 500;
         }
@@ -132,11 +113,9 @@
         }
 
         .btn {
-
             padding: 15px 30px;
             border: none;
             border-radius: 50px;
-
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
@@ -148,50 +127,31 @@
         }
 
         .btn-primary {
-
-
             background: #667eea;
             color: white;
-
-
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
         .btn-primary:hover {
-
-
             background: #5a6fd8;
             transform: translateY(-2px);
-
-
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
 
         .btn-secondary {
-
-
-
-            background: #27ae60;
+            background: #667eea;
             color: white;
-
-
-
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
         .btn-secondary:hover {
-
-
-
-            background: #229954;
+            background: #5a6fd8;
             transform: translateY(-2px);
-
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
 
         /* Sections */
         section {
-
             padding: 5rem 0;
             background: white;
         }
@@ -202,10 +162,8 @@
 
         .section-title {
             text-align: center;
-
             font-size: 2.8rem;
             margin-bottom: 3rem;
-
             color: #2c3e50;
             font-weight: 700;
         }
@@ -214,7 +172,6 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
-
             gap: 4rem;
             align-items: center;
         }
@@ -224,9 +181,7 @@
             max-width: 300px;
             height: 300px;
             border-radius: 50%;
-
-
-            background: linear-gradient(135deg, #667eea, #27ae60);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -244,10 +199,8 @@
         }
 
         .about-text {
-
             font-size: 1.2rem;
             line-height: 1.8;
-
             color: #2c3e50;
         }
 
@@ -256,150 +209,79 @@
         }
 
         .about-text strong {
-
             color: #667eea;
         }
 
         /* Experience Section */
         .experience-timeline {
-
-
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .experience-item {
             background: white;
-
-
-
-
-
-
-
-
-
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 6px solid #667eea;
-            position: relative;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-left: 5px solid #667eea;
         }
 
         .experience-item:hover {
-
-
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-
-
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
 
         .experience-title {
-
-
-
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: bold;
-
             color: #2c3e50;
             margin-bottom: 0.5rem;
         }
 
         .experience-company {
-
-
             color: #667eea;
             font-weight: 600;
-
-
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         .experience-period {
-
-
-
-
             color: #7f8c8d;
             font-size: 1rem;
             font-weight: 600;
             background: #ecf0f1;
-
-
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
         }
 
-
-        .experience-highlight {
-            background: linear-gradient(135deg, #667eea, #27ae60);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-align: center;
-        }
-
-
-
         .experience-description {
             color: #2c3e50;
-
-
-            line-height: 1.8;
+            line-height: 1.7;
             font-size: 1.1rem;
         }
 
         .experience-description ul {
             margin-left: 1.5rem;
-
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
 
         .experience-description li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: #34495e;
-            position: relative;
-        }
-
-        .experience-description li::before {
-            content: "▶";
-            color: #667eea;
-            font-weight: bold;
-            position: absolute;
-            left: -1.5rem;
-        }
-
-
-
-
-        .achievement {
-            background: #e8f5e8;
-            border-left: 4px solid #27ae60;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            font-weight: 500;
-            color: #2c3e50;
         }
 
         /* Projects Section */
         .projects-grid {
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
@@ -409,40 +291,30 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
-
-
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .project-image {
             height: 200px;
-
-
-            background: linear-gradient(135deg, #667eea, #27ae60);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-
             font-size: 2.5rem;
         }
 
         .project-content {
-
             padding: 2rem;
         }
 
         .project-title {
-
-
-
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: #2c3e50;
@@ -450,8 +322,6 @@
         }
 
         .project-description {
-
-
             color: #34495e;
             margin-bottom: 1.5rem;
             line-height: 1.6;
@@ -459,10 +329,6 @@
         }
 
         .project-tech {
-
-
-
-
             color: #667eea;
             font-size: 1rem;
             font-weight: 600;
@@ -476,30 +342,20 @@
 
         .paper-item {
             background: white;
-
             border-radius: 15px;
-
             padding: 2.5rem;
             margin-bottom: 1.5rem;
-
-
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-
-            border-left: 5px solid #27ae60;
+            border-left: 5px solid #667eea;
         }
 
         .paper-item:hover {
-
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .paper-title {
-
-
-
-
             font-size: 1.4rem;
             margin-bottom: 0.8rem;
             color: #2c3e50;
@@ -507,7 +363,6 @@
         }
 
         .paper-authors {
-
             color: #7f8c8d;
             font-style: italic;
             margin-bottom: 0.5rem;
@@ -515,9 +370,6 @@
         }
 
         .paper-venue {
-
-
-
             color: #95a5a6;
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
@@ -527,29 +379,16 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-
-
-            color: #27ae60;
+            color: #667eea;
             text-decoration: none;
-
             font-weight: 600;
             font-size: 1.1rem;
         }
 
         .paper-download:hover {
-
-            color: #229954;
+            color: #5a6fd8;
             text-decoration: underline;
         }
-
-
-
-
-
-
-
-
-
 
         /* Contact Section */
         .contact-content {
@@ -559,9 +398,6 @@
         }
 
         .contact-content p {
-
-
-
             color: #2c3e50;
             font-size: 1.2rem;
             margin-bottom: 3rem;
@@ -571,7 +407,6 @@
         .contact-info {
             display: flex;
             justify-content: center;
-
             gap: 3rem;
             margin-top: 2rem;
             flex-wrap: wrap;
@@ -580,9 +415,6 @@
         .contact-item {
             display: flex;
             align-items: center;
-
-
-
             gap: 0.8rem;
             color: #2c3e50;
             font-size: 1.1rem;
@@ -590,25 +422,19 @@
         }
 
         .contact-item a {
-
-
             color: #667eea;
             text-decoration: none;
             transition: color 0.3s ease;
-
             font-weight: 600;
         }
 
         .contact-item a:hover {
-
-
             color: #5a6fd8;
             text-decoration: underline;
         }
 
         /* Footer */
         footer {
-
             background: #2c3e50;
             color: white;
             text-align: center;
@@ -667,8 +493,7 @@
             }
 
             .experience-item {
-
-                padding: 2rem;
+                padding: 1.5rem;
             }
         }
     </style>
@@ -691,12 +516,10 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sujan Bharadwaj</h1>
-
             <p>AI & Data Science Engineer • ESG Analytics Specialist • Transforming AI into Business Solutions</p>
             <div class="cta-buttons">
                 <a href="#experience" class="btn btn-primary">View Experience</a>
                 <a href="assets/resume/Resume_Sujan.pdf" class="btn btn-secondary" download>📄 Download Resume</a>
-
                 <a href="https://www.linkedin.com/in/sujan-bharadwaj-9243021b2" class="btn btn-secondary" target="_blank">🔗 LinkedIn</a>
             </div>
         </div>
@@ -712,16 +535,12 @@
                          onerror="console.log('Profile image failed to load'); this.style.display='none'; this.parentElement.innerHTML='👤';">
                 </div>
                 <div class="about-text">
-
                     <p>Hello! I'm an AI & Data Science Engineer with ~3 years of experience specializing in transforming complex data into actionable business insights. My passion lies at the intersection of artificial intelligence, sustainability analytics, and <strong>converting AI capabilities into practical business solutions</strong>.</p>
                     
-
                     <p>Having completed my Master's in AI at UNSW Sydney, I've built my expertise around ESG knowledge graphs, scalable data pipelines, and deploying ML models that drive real-world impact. My work spans from designing Large Concept Models for scientific literature analysis to developing ontology-enhanced ESG analytics platforms that help organizations make data-driven sustainability decisions.</p>
                     
-
                     <p>What sets me apart is my focus on <strong>bridging the gap between cutting-edge AI research and tangible business value</strong> - ensuring that the models I build not only perform well technically but also solve real business challenges and generate measurable ROI. I excel at translating complex AI concepts into business language that stakeholders can understand and act upon.</p>
                     
-
                     <p>My technical toolkit includes Python, PyTorch, AWS, SPARQL, and modern data visualization tools. But beyond the technology, I'm driven by the mission to make AI accessible and valuable for businesses of all sizes, from startups to enterprise organizations.</p>
                 </div>
             </div>
@@ -730,154 +549,85 @@
 
     <section id="experience">
         <div class="container">
-
-            <h2 class="section-title">Professional Journey</h2>
+            <h2 class="section-title">Professional Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-
-
                             <h3 class="experience-title">AI Engineer Intern</h3>
                             <p class="experience-company">Scinter, Sydney, Australia</p>
                         </div>
-
                         <span class="experience-period">Apr 2025 – Present</span>
                     </div>
-                    <div class="experience-highlight">
-                        🚀 Currently revolutionizing scientific literature analysis through Large Concept Models and advanced NLP
-                    </div>
                     <div class="experience-description">
                         <ul>
-
-
-
-
-
-
-
-
-                            <li><strong>Pioneered Large Concept Models (LCM)</strong> that automatically extract interdisciplinary insights from thousands of scientific papers, reducing research discovery time by 70%</li>
-                            <li><strong>Architected Dynamic Knowledge Graphs</strong> connecting 50,000+ publications, entities, and research trends using Neo4j and custom algorithms</li>
-                            <li><strong>Transformed unstructured data into semantic ontologies</strong> enabling intelligent search, concept reasoning, and visual analytics for research teams</li>
-                            <li><strong>Deployed scalable NLP pipelines</strong> processing 10GB+ of scientific literature daily for automated concept linking and trend forecasting</li>
+                            <li>Designed and enhanced Large Concept Models (LCM) to extract interdisciplinary insights from scientific literature</li>
+                            <li>Built Dynamic Knowledge Graphs mapping publications, entities, and emerging research trends</li>
+                            <li>Structured unstructured data into ontologies for semantic search, concept reasoning, and visual analytics</li>
+                            <li>Supported deployment of scalable NLP pipelines for automated concept linking and trend forecasting</li>
                         </ul>
-                        <div class="achievement">
-                            💡 Impact: Accelerated scientific discovery workflows and enabled cross-disciplinary research connections previously impossible to identify manually
-                        </div>
                     </div>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-
-
-
-
-                            <h3 class="experience-title">AI & Data Science Engineer</h3>
-                            <p class="experience-company">UNSW Sydney, Australia</p>
+                            <h3 class="experience-title">AI & Data Science Engineer (Part-Time)</h3>
+                            <p class="experience-company">UNSW, Sydney, Australia</p>
                         </div>
-
                         <span class="experience-period">May 2023 – May 2025</span>
                     </div>
-                    <div class="experience-highlight">
-                        🌱 Built enterprise-grade ESG analytics platform serving Fortune 500 sustainability reporting
-                    </div>
                     <div class="experience-description">
                         <ul>
-
-
-
-
-
-
-
-                            <li><strong>Led full-stack development of ESG analytics platform</strong> integrating RDF ontologies, SPARQL queries, and ML algorithms serving 20+ enterprise clients for sustainability reporting</li>
-                            <li><strong>Created reusable ESG Knowledge Graph Engine</strong> using Python and RDFLib, automating SASB standard compliance and reducing manual analysis time by 60%</li>
-                            <li><strong>Engineered computer vision solutions for environmental monitoring:</strong>
+                            <li>Led end-to-end development of an ontology-enhanced ESG analytics platform, integrating domain-specific knowledge graphs, RDF ontologies, and SPARQL queries with principal component analysis (PCA) to produce interpretable sustainability insights across sectors</li>
+                            <li>Built a reusable ESG Knowledge Graph Engine using Python and RDFLib, enabling automated feature selection, disclosure-topic classification, and industry-specific ESG profiling based on SASB standards</li>
+                            <li>Designed and deployed deep learning pipelines for environmental and marine image segmentation:
                                 <ul>
-
-
-                                    <li>U-Net model achieving 18% accuracy boost for terrain analysis under challenging conditions</li>
-                                    <li>CNN architecture reaching 92% classification accuracy for marine species recognition</li>
+                                    <li>Developed a U-Net model with Group Normalization and dropout layers to process RUGD terrain data under challenging lighting, achieving an 18% boost in pixel-level accuracy</li>
+                                    <li>Applied CNN architectures to the SeaTurtleID2022 dataset, reaching 0.84 IoU and over 92% classification accuracy for marine species recognition</li>
                                 </ul>
                             </li>
-
-
-
-                            <li><strong>Developed healthcare AI system</strong> with multi-label disease detection achieving 0.91+ ROC-AUC across multiple conditions using advanced SMOTE techniques</li>
-                            <li><strong>Conducted comprehensive ML benchmarking</strong> proving deep learning models outperform traditional approaches by 20-25% in F1-score across domain-shifted datasets</li>
+                            <li>Created a multi-label classification system for disease detection in healthcare datasets using SMOTE for imbalance handling and batch normalization for improved convergence; achieved an average ROC-AUC > 0.91 across multiple conditions</li>
+                            <li>Conducted comparative benchmarking of traditional and DL models (SVM, HOG+SVM vs CNN) across domain-shifted datasets, with deep learning models outperforming by 20–25% in F1-score</li>
+                            <li>Documented all experiments in reproducible modules for potential open-source publication, emphasizing engineering standards, modularity, and cross-domain reusability</li>
                         </ul>
-                        <div class="achievement">
-                            🏆 Achievement: Platform now processes $2M+ in sustainability investments and influences ESG decisions for major corporations
-                        </div>
                     </div>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-
-
                             <h3 class="experience-title">Cloud Analytics Analyst</h3>
                             <p class="experience-company">Accenture, India</p>
                         </div>
-
                         <span class="experience-period">Jan 2021 – Feb 2023</span>
-                    </div>
-                    <div class="experience-highlight">
-                        💰 Delivered $500K+ annual cost savings for enterprise clients through intelligent cloud optimization
                     </div>
                     <div class="experience-description">
                         <ul>
-
-
-
-
-
-
-
-
-
-
-                            <li><strong>Revolutionized cloud cost management</strong> by automating end-to-end analytics workflows, slashing manual reporting time by 40% and enabling real-time anomaly detection across AWS and Azure</li>
-                            <li><strong>Built executive-level dashboards</strong> in Google Data Studio and QlikView, empowering 20+ stakeholders to make data-driven budget decisions worth millions</li>
-                            <li><strong>Spearheaded resource optimization initiative</strong> identifying idle cloud assets and underutilized resources, directly generating 25-30% monthly cost savings for Fortune 500 clients</li>
-                            <li><strong>Developed intelligent monitoring suite</strong> tracking usage patterns across AWS EC2, Azure Blob Storage, and RDS instances, improving compliance reporting accuracy by 15%</li>
-                            <li><strong>Bridge technical and financial teams</strong> by creating standardized usage-to-cost mapping algorithms that transformed how organizations understand cloud spending</li>
-                            <li><strong>Mentored junior analysts and built reusable code libraries</strong> that became standard tools across Accenture's cloud practice, improving team productivity by 35%</li>
+                            <li>Automated end-to-end cloud cost analytics workflows using Python, SQL, and REST APIs, reducing manual reporting time by ~40% and enabling real-time anomaly detection for infrastructure cost spikes across multi-cloud environments (AWS, Azure)</li>
+                            <li>Designed and deployed interactive KPI dashboards in Google Data Studio and QlikView, enabling 20+ stakeholders across engineering and operations to track resource consumption, forecast trends, and make data-driven budget decisions</li>
+                            <li>Led a resource optimization initiative that identified underutilized and idle cloud assets including EC2 instances, storage buckets, and Elastic IPs—resulting in monthly cost savings of 25–30% for enterprise clients</li>
+                            <li>Developed a suite of modular scripts and monitoring tools to track usage patterns across AWS EC2, Azure Blob Storage, and RDS instances, improving visibility into resource consumption and streamlining compliance reporting for ISO and internal audits</li>
+                            <li>Bridged communication gaps between technical and financial teams by aligning usage metrics with billing forecasts. Created standardized usage-to-cost mapping logic that improved billing accuracy by 15%</li>
+                            <li>Mentored three junior analysts, sharing best practices in cloud optimization and analytics scripting, and contributed reusable code modules to internal automation repositories—enhancing team productivity and onboarding efficiency</li>
                         </ul>
-                        <div class="achievement">
-                            🎯 Recognition: Received "Outstanding Performance" award for delivering measurable ROI and client satisfaction scores above 95%
-                        </div>
                     </div>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
                         <div>
-
-                            <h3 class="experience-title">IoT Research Intern</h3>
+                            <h3 class="experience-title">IoT Intern – Health Monitoring System</h3>
                             <p class="experience-company">Nettur Technical Training Foundation</p>
                         </div>
                         <span class="experience-period">July 2019 – Aug 2019</span>
                     </div>
-                    <div class="experience-highlight">
-                        🏥 Built real-time health monitoring system with 95%+ reliability for critical patient care
-                    </div>
                     <div class="experience-description">
                         <ul>
-
-
-
-                            <li><strong>Engineered life-critical health monitoring system</strong> integrating multiple sensors (temperature, heart rate, motion) with microcontrollers for continuous patient vital tracking</li>
-                            <li><strong>Optimized embedded system performance</strong> using C programming to achieve sub-250ms response latency, crucial for timely medical interventions</li>
-                            <li><strong>Implemented advanced signal processing algorithms</strong> minimizing false positives and ensuring 95%+ system reliability in noisy hospital environments</li>
+                            <li>Engineered a real-time health monitoring system integrating temperature, heart rate, and motion sensors with microcontrollers to continuously track patient vitals and trigger alerts for anomalies</li>
+                            <li>Programmed embedded systems using C to handle real-time signal acquisition and processing, achieving response latency under 250ms, crucial for timely health interventions</li>
+                            <li>Implemented signal filtering and validation algorithms to minimize false positives and ensure >95% system reliability in noisy test environments</li>
                         </ul>
-                        <div class="achievement">
-                            ⚡ Innovation: System prototype became foundation for hospital's patient monitoring upgrade, potentially impacting 1000+ patients annually
-                        </div>
                     </div>
                 </div>
             </div>
@@ -937,27 +687,6 @@
                     <p class="paper-venue">International Research Journal of Engineering and Technology (IRJET), 2020</p>
                     <a href="papers/IRJET-paper.pdf" class="paper-download" download>📄 Download Paper</a>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </section>
@@ -966,9 +695,7 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
-
-
-                <p>Ready to transform your business with AI? I specialize in converting cutting-edge technology into practical solutions that drive real ROI. Let's discuss how AI can solve your specific challenges and create measurable impact for your organization!</p>
+                <p>I'm passionate about leveraging AI for sustainable business solutions and converting cutting-edge technology into practical business value. Let's discuss how AI can drive meaningful impact and ROI in your organization!</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
@@ -980,7 +707,6 @@
                     </div>
                     <div class="contact-item">
                         <span>🔗</span>
-
                         <a href="https://www.linkedin.com/in/sujan-bharadwaj-9243021b2" target="_blank">LinkedIn Profile</a>
                     </div>
                     <div class="contact-item">
@@ -1033,7 +759,6 @@
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
             } else {
-
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
             }
         });
@@ -1057,24 +782,6 @@
         document.querySelectorAll('.project-card, .paper-item, .experience-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe project cards, paper items, and experience items
-        document.querySelectorAll('.project-card, .paper-item, .experience-item').forEach(el => {
-            el.style.opacity = '0';
-
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
