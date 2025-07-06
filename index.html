@@ -195,6 +195,64 @@
             line-height: 1.8;
         }
 
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .experience-period {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .experience-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .experience-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -241,20 +299,22 @@
             margin-bottom: 1rem;
         }
 
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
 
-        .project-links a {
+
+
+
+
+
+        .project-tech {
             color: #667eea;
-            text-decoration: none;
+
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
-        .project-links a:hover {
-            text-decoration: underline;
-        }
+
+
+
 
         /* Papers Section */
         .papers-list {
@@ -337,6 +397,17 @@
             color: #666;
         }
 
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #5a6fd8;
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             background: #333;
@@ -385,6 +456,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -395,6 +471,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#papers">Papers</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -407,9 +484,11 @@
             <h1>Sujan Bharadwaj</h1>
             <p>AI & Data Science Engineer • ESG Analytics Specialist • Transforming Data into Business Insights</p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
+
+                <a href="#experience" class="btn btn-primary">View Experience</a>
                 <a href="assets/resume/Resume_Sujan.pdf" class="btn btn-secondary" download>📄 Download Resume</a>
-                <a href="https://github.com/Sujan2023-AI" class="btn btn-secondary" target="_blank">🐙 GitHub</a>
+
+                <a href="https://www.linkedin.com/in/sujan-bharadwaj" class="btn btn-secondary" target="_blank">🔗 LinkedIn</a>
             </div>
         </div>
     </section>
@@ -437,19 +516,83 @@
         </div>
     </section>
 
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">AI Research Engineer</h3>
+                            <p class="experience-company">Scinter Australia</p>
+                        </div>
+                        <span class="experience-period">2023 - Present</span>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Developed Large Concept Models (LCM) for extracting interdisciplinary insights from scientific literature</li>
+                            <li>Built dynamic knowledge graphs mapping publications, entities, and emerging research trends</li>
+                            <li>Implemented automated concept linking algorithms for scientific discovery</li>
+                            <li>Enhanced research collaboration platforms with AI-driven insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">ESG Data Analyst</h3>
+                            <p class="experience-company">Sustainable Analytics Co.</p>
+                        </div>
+                        <span class="experience-period">2022 - 2023</span>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Designed ontology-enhanced ESG analytics platform using RDF ontologies and SPARQL queries</li>
+                            <li>Developed reusable ESG profiling engine based on SASB standards</li>
+                            <li>Implemented PCA-based dimensionality reduction for interpretable sustainability insights</li>
+                            <li>Created automated reporting systems for ESG compliance monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Data Science Engineer</h3>
+                            <p class="experience-company">CloudTech Solutions</p>
+                        </div>
+                        <span class="experience-period">2021 - 2022</span>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Built end-to-end cloud cost analytics platform reducing manual reporting by 40%</li>
+                            <li>Developed interactive dashboards for data-driven budget decision making</li>
+                            <li>Achieved 25-30% monthly cost savings for enterprise clients through optimization algorithms</li>
+                            <li>Implemented automated alerts and anomaly detection for cost management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+
+            <h2 class="section-title">Key Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">🌱</div>
                     <div class="project-content">
                         <h3 class="project-title">ESG Knowledge Graph Engine</h3>
-                        <p class="project-description">Ontology-enhanced ESG analytics platform integrating RDF ontologies and SPARQL queries with PCA to produce interpretable sustainability insights. Built reusable engine enabling automated ESG profiling based on SASB standards.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Sujan2023-AI/esg-analytics" target="_blank">GitHub</a>
-                            <a href="#contact">Request Demo</a>
-                        </div>
+
+
+
+
+
+                        <p class="project-description">Ontology-enhanced ESG analytics platform integrating RDF ontologies and SPARQL queries with PCA to produce interpretable sustainability insights. Built reusable engine enabling automated ESG profiling based on SASB standards for enterprise sustainability reporting.</p>
+                        <p class="project-tech">Technologies: Python, RDF, SPARQL, scikit-learn, D3.js</p>
                     </div>
                 </div>
 
@@ -457,11 +600,13 @@
                     <div class="project-image">🧠</div>
                     <div class="project-content">
                         <h3 class="project-title">Large Concept Models (LCM)</h3>
-                        <p class="project-description">Enhanced Large Concept Models to extract interdisciplinary insights from scientific literature. Built dynamic knowledge graphs mapping publications, entities, and emerging research trends for automated concept linking.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Sujan2023-AI/lcm-scientific-insights" target="_blank">Code</a>
-                            <a href="#papers">Research Paper</a>
-                        </div>
+
+
+
+
+
+                        <p class="project-description">Enhanced Large Concept Models to extract interdisciplinary insights from scientific literature. Built dynamic knowledge graphs mapping publications, entities, and emerging research trends for automated concept linking and scientific discovery acceleration.</p>
+                        <p class="project-tech">Technologies: PyTorch, Neo4j, NLP, Knowledge Graphs, Scientific APIs</p>
                     </div>
                 </div>
 
@@ -469,11 +614,13 @@
                     <div class="project-image">🏥</div>
                     <div class="project-content">
                         <h3 class="project-title">Multi-Label Disease Detection</h3>
-                        <p class="project-description">Advanced healthcare ML system using SMOTE for imbalance handling and batch normalization. Achieved average ROC-AUC > 0.91 across multiple conditions, focusing on interpretable and ethical AI in healthcare.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Sujan2023-AI/healthcare-ml" target="_blank">GitHub</a>
-                            <a href="#papers">Publication</a>
-                        </div>
+
+
+
+
+
+                        <p class="project-description">Advanced healthcare ML system using SMOTE for imbalance handling and batch normalization. Achieved average ROC-AUC > 0.91 across multiple conditions, focusing on interpretable and ethical AI in healthcare with explainable predictions.</p>
+                        <p class="project-tech">Technologies: Python, scikit-learn, SMOTE, LIME, Medical Imaging</p>
                     </div>
                 </div>
 
@@ -481,11 +628,13 @@
                     <div class="project-image">☁️</div>
                     <div class="project-content">
                         <h3 class="project-title">Cloud Cost Analytics Platform</h3>
-                        <p class="project-description">Automated end-to-end cloud cost analytics reducing manual reporting by 40%. Built interactive dashboards enabling data-driven budget decisions and achieved 25-30% monthly cost savings for enterprise clients.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Sujan2023-AI/cloud-analytics" target="_blank">Source</a>
-                            <a href="#contact">Case Study</a>
-                        </div>
+
+
+
+
+
+                        <p class="project-description">Automated end-to-end cloud cost analytics platform reducing manual reporting by 40%. Built interactive dashboards enabling data-driven budget decisions and achieved 25-30% monthly cost savings for enterprise clients through predictive cost optimization.</p>
+                        <p class="project-tech">Technologies: AWS, Python, Tableau, Apache Airflow, PostgreSQL</p>
                     </div>
                 </div>
             </div>
@@ -538,21 +687,24 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
-                        <span>sujanbharadwaj23@gmail.com</span>
+
+                        <a href="mailto:sujanbharadwaj23@gmail.com">sujanbharadwaj23@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <span>📱</span>
-                        <span>0401611069</span>
+
+                        <a href="tel:+61401611069">0401611069</a>
                     </div>
                     <div class="contact-item">
                         <span>🔗</span>
-                        <span>linkedin.com/in/sujan-bharadwaj</span>
+
+                        <a href="https://www.linkedin.com/in/sujan-bharadwaj" target="_blank">LinkedIn Profile</a>
                     </div>
                     <div class="contact-item">
-                        <span>🐙</span>
-                        <span>github.com/Sujan2023-AI</span>
-                    </div>
-                    <div class="contact-item">
+
+
+
+
                         <span>📍</span>
                         <span>Sydney, Australia</span>
                     </div>
@@ -621,8 +773,10 @@
             });
         }, observerOptions);
 
-        // Observe project cards and paper items
-        document.querySelectorAll('.project-card, .paper-item').forEach(el => {
+
+
+        // Observe project cards, paper items, and experience items
+        document.querySelectorAll('.project-card, .paper-item, .experience-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
