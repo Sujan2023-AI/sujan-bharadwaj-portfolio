@@ -54,6 +54,7 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -65,6 +66,17 @@
 
         .nav-links a:hover {
             color: #667eea;
+        }
+
+        .github-icon {
+            width: 24px;
+            height: 24px;
+            fill: #2c3e50;
+            transition: fill 0.3s ease;
+        }
+
+        .nav-links a:hover .github-icon {
+            fill: #667eea;
         }
 
         /* Hero Section */
@@ -360,6 +372,34 @@
             color: #3498db;
             font-size: 1rem;
             font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #2980b9;
+        }
+
+        .project-github-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
         }
 
         /* Papers Section */
@@ -490,7 +530,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                gap: 1rem;
             }
 
             .hero h1 {
@@ -533,6 +573,12 @@
             .cert-badge {
                 margin: 0.5rem;
             }
+
+            .project-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -547,6 +593,13 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#papers">Papers</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="https://github.com/Sujan2023-AI" target="_blank" title="GitHub Profile">
+                        <svg class="github-icon" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -695,6 +748,14 @@
                         <h3 class="project-title">ESG Knowledge Graph Engine</h3>
                         <p class="project-description">Ontology-enhanced ESG analytics platform integrating RDF ontologies and SPARQL queries with PCA to produce interpretable sustainability insights. Built reusable engine enabling automated ESG profiling based on SASB standards for enterprise sustainability reporting.</p>
                         <p class="project-tech">Technologies: Python, RDF, SPARQL, scikit-learn, D3.js</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/ESG_Analytical_Platform" class="project-link" target="_blank">
+                                <svg class="project-github-icon" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -704,6 +765,26 @@
                         <h3 class="project-title">Large Concept Models (LCM)</h3>
                         <p class="project-description">Enhanced Large Concept Models to extract interdisciplinary insights from scientific literature. Built dynamic knowledge graphs mapping publications, entities, and emerging research trends for automated concept linking and scientific discovery acceleration.</p>
                         <p class="project-tech">Technologies: PyTorch, Neo4j, NLP, Knowledge Graphs, Scientific APIs</p>
+                        <div class="project-links">
+                            <span style="color: #7f8c8d; font-style: italic;">Repository under development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🐢</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sea Turtle Body Parts Segmentation</h3>
+                        <p class="project-description">Automated segmentation of sea turtle body parts (head, flippers, carapace) using deep learning models on SeaTurtleID2022 dataset. Implemented U-Net, DeepLabV3, and PSPNet architectures with PSPNet achieving best performance (0.86 mean IoU) through multi-scale contextual feature extraction.</p>
+                        <p class="project-tech">Technologies: TensorFlow, Computer Vision, U-Net, DeepLabV3, PSPNet</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/Sea_Turtle_Segmentation" class="project-link" target="_blank">
+                                <svg class="project-github-icon" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -713,6 +794,14 @@
                         <h3 class="project-title">Multi-Label Disease Detection</h3>
                         <p class="project-description">Advanced healthcare ML system using SMOTE for imbalance handling and batch normalization. Achieved average ROC-AUC > 0.91 across multiple conditions, focusing on interpretable and ethical AI in healthcare with explainable predictions.</p>
                         <p class="project-tech">Technologies: Python, scikit-learn, SMOTE, LIME, Medical Imaging</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Sujan2023-AI/Multi-Task-Learning-for-Disease-Prediction" class="project-link" target="_blank">
+                                <svg class="project-github-icon" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -722,6 +811,9 @@
                         <h3 class="project-title">Cloud Cost Analytics Platform</h3>
                         <p class="project-description">Automated end-to-end cloud cost analytics platform reducing manual reporting by 40%. Built interactive dashboards enabling data-driven budget decisions and achieved 25-30% monthly cost savings for enterprise clients through predictive cost optimization.</p>
                         <p class="project-tech">Technologies: AWS, Python, Tableau, Apache Airflow, PostgreSQL</p>
+                        <div class="project-links">
+                            <span style="color: #7f8c8d; font-style: italic;">Enterprise project - proprietary</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -840,5 +932,4 @@
         });
     </script>
 </body>
-</html>
 </html>
